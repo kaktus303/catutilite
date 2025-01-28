@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 {
     FILE *file = fopen(argv[argc - 1], "r");
     char symbole;
-    int number = 1, n_flag = 0, e_flag = 0, b_flag = 0, s_flag = 0, t_flag = 0, flags_capasity = 2, flags_number = 0, execute_flag = 1, symbole_in_string = 0;
+    int number = 2, n_flag = 0, e_flag = 0, b_flag = 0, s_flag = 0, t_flag = 0, flags_capasity = 2, flags_number = 0, execute_flag = 1, symbole_in_string = 0;
     int *flags = malloc(sizeof(int) * flags_capasity);
     for (int i = 1; i < argc; ++i)
     {
@@ -45,13 +45,16 @@ int main(int argc, char *argv[])
             }
         }
     }
+    if(b_flag == 1 && n_flag == 1) n_flag = 0;
     for (int i = 1; i < argc && execute_flag == 1; ++i)
     {
         if (argv[i][0] != '-')
         {
             file = fopen(argv[i], "r");
+            if(file){
             while (fscanf(file, "%c", &symbole) == 1 && execute_flag == 1)
             {
+
                   if (symbole == '\n' && e_flag)
                 {
                     printf("$");
@@ -65,26 +68,29 @@ int main(int argc, char *argv[])
                     number++;
                 }
             }
+            }
+            else printf("cat: %s: No such file or directory\n", argv[i]);
         }
     }
     // printf("%s\n", argv[0]);
 
-    if (file)
-    {
-        // printf("YES");
-        while (fscanf(file, "%c", &symbole) == 1 && execute_flag == 1)
-        {
+    // if (file)
+    // {
+    //       printf("1");
+    //     // printf("YES");
+    //     while (fscanf(file, "%c", &symbole) == 1 && execute_flag == 1)
+    //     {
 
-            printf("%c", symbole);
-            if (symbole == '\n')
-            {
-                printf("    %d ", number);
-                number++;
-            }
-        }
-    }
-    else
-    {
-        printf("cat: %s: No such file or directory\n", argv[argc - 1]);
-    }
+    //         printf("%c", symbole);
+    //         if (symbole == '\n')
+    //         {
+    //             printf("    %d ", number);
+    //             number++;
+    //         }
+    //     }
+    // }
+    // else
+    // {
+    //     printf("cat: %s: No such file or directory\n", argv[argc - 1]);
+    // }
 }
