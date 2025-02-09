@@ -1,0 +1,816 @@
+
+
+
+
+
+
+ Test -1 : 
+ 
+==112541== Memcheck, a memory error detector
+==112541== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==112541== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==112541== Command: ./s21_cat -e TestText1.txt TestText2.txt TestText3.txt
+==112541== 
+123   456$
+$
+789$
+two files	   456$
+$
+$
+$
+$
+789$
+$
+$
+$
+three^Ms files	$
+ $
+   456$
+$
+$
+$
+$
+789$
+==112541== 
+==112541== HEAP SUMMARY:
+==112541==     in use at exit: 0 bytes in 0 blocks
+==112541==   total heap usage: 7 allocs, 7 frees, 17,800 bytes allocated
+==112541== 
+==112541== All heap blocks were freed -- no leaks are possible
+==112541== 
+==112541== For lists of detected and suppressed errors, rerun with: -s
+==112541== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+
+
+
+
+ Test 0 : 
+ 
+==112571== Memcheck, a memory error detector
+==112571== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==112571== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==112571== Command: ./s21_cat -v TestText1.txt TestText2.txt TestText3.txt
+==112571== 
+123   456
+
+789
+two files	   456
+
+
+
+
+789
+
+
+
+three^Ms files	
+ 
+   456
+
+
+
+
+789
+==112571== 
+==112571== HEAP SUMMARY:
+==112571==     in use at exit: 0 bytes in 0 blocks
+==112571==   total heap usage: 7 allocs, 7 frees, 17,800 bytes allocated
+==112571== 
+==112571== All heap blocks were freed -- no leaks are possible
+==112571== 
+==112571== For lists of detected and suppressed errors, rerun with: -s
+==112571== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+
+
+
+
+ Test 1 : 
+ 
+==112581== Memcheck, a memory error detector
+==112581== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==112581== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==112581== Command: ./s21_cat -E TestText1.txt TestText2.txt TestText3.txt
+==112581== 
+123   456$
+$
+789$
+two files	   456$
+$
+$
+$
+$
+789$
+$
+$
+$
+threes files	$
+ $
+   456$
+$
+$
+$
+$
+789$
+==112581== 
+==112581== HEAP SUMMARY:
+==112581==     in use at exit: 0 bytes in 0 blocks
+==112581==   total heap usage: 7 allocs, 7 frees, 17,800 bytes allocated
+==112581== 
+==112581== All heap blocks were freed -- no leaks are possible
+==112581== 
+==112581== For lists of detected and suppressed errors, rerun with: -s
+==112581== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+
+
+
+
+ Test 2 : 
+ 
+==112592== Memcheck, a memory error detector
+==112592== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==112592== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==112592== Command: ./s21_cat -b TestText1.txt TestText2.txt TestText3.txt
+==112592== 
+     1	123   456
+
+     2	789
+     3	two files	   456
+
+
+
+
+     4	789
+
+
+
+     5	threes files	
+     6	 
+     7	   456
+
+
+
+
+     8	789
+==112592== 
+==112592== HEAP SUMMARY:
+==112592==     in use at exit: 0 bytes in 0 blocks
+==112592==   total heap usage: 7 allocs, 7 frees, 17,800 bytes allocated
+==112592== 
+==112592== All heap blocks were freed -- no leaks are possible
+==112592== 
+==112592== For lists of detected and suppressed errors, rerun with: -s
+==112592== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+
+
+
+
+ Test 3 : 
+ 
+==112601== Memcheck, a memory error detector
+==112601== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==112601== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==112601== Command: ./s21_cat --number-nonblank TestText1.txt TestText2.txt TestText3.txt
+==112601== 
+     1	123   456
+
+     2	789
+     3	two files	   456
+
+
+
+
+     4	789
+
+
+
+     5	threes files	
+     6	 
+     7	   456
+
+
+
+
+     8	789
+==112601== 
+==112601== HEAP SUMMARY:
+==112601==     in use at exit: 0 bytes in 0 blocks
+==112601==   total heap usage: 7 allocs, 7 frees, 17,800 bytes allocated
+==112601== 
+==112601== All heap blocks were freed -- no leaks are possible
+==112601== 
+==112601== For lists of detected and suppressed errors, rerun with: -s
+==112601== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+
+
+
+
+ Test 4 : 
+ 
+==112613== Memcheck, a memory error detector
+==112613== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==112613== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==112613== Command: ./s21_cat -n TestText1.txt TestText2.txt TestText3.txt
+==112613== 
+     1	123   456
+     2	
+     3	789
+     4	two files	   456
+     5	
+     6	
+     7	
+     8	
+     9	789
+    10	
+    11	
+    12	
+    13	threes files	
+    14	 
+    15	   456
+    16	
+    17	
+    18	
+    19	
+    20	789
+==112613== 
+==112613== HEAP SUMMARY:
+==112613==     in use at exit: 0 bytes in 0 blocks
+==112613==   total heap usage: 7 allocs, 7 frees, 17,800 bytes allocated
+==112613== 
+==112613== All heap blocks were freed -- no leaks are possible
+==112613== 
+==112613== For lists of detected and suppressed errors, rerun with: -s
+==112613== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+
+
+
+
+ Test 5 : 
+ 
+==112624== Memcheck, a memory error detector
+==112624== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==112624== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==112624== Command: ./s21_cat --number TestText1.txt TestText2.txt TestText3.txt
+==112624== 
+     1	123   456
+     2	
+     3	789
+     4	two files	   456
+     5	
+     6	
+     7	
+     8	
+     9	789
+    10	
+    11	
+    12	
+    13	threes files	
+    14	 
+    15	   456
+    16	
+    17	
+    18	
+    19	
+    20	789
+==112624== 
+==112624== HEAP SUMMARY:
+==112624==     in use at exit: 0 bytes in 0 blocks
+==112624==   total heap usage: 7 allocs, 7 frees, 17,800 bytes allocated
+==112624== 
+==112624== All heap blocks were freed -- no leaks are possible
+==112624== 
+==112624== For lists of detected and suppressed errors, rerun with: -s
+==112624== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+
+
+
+
+ Test 6 : 
+ 
+==112633== Memcheck, a memory error detector
+==112633== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==112633== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==112633== Command: ./s21_cat --squeeze-blank TestText1.txt TestText2.txt TestText3.txt
+==112633== 
+123   456
+
+789
+two files	   456
+
+789
+
+threes files	
+ 
+   456
+
+789
+==112633== 
+==112633== HEAP SUMMARY:
+==112633==     in use at exit: 0 bytes in 0 blocks
+==112633==   total heap usage: 7 allocs, 7 frees, 17,800 bytes allocated
+==112633== 
+==112633== All heap blocks were freed -- no leaks are possible
+==112633== 
+==112633== For lists of detected and suppressed errors, rerun with: -s
+==112633== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+
+
+
+
+ Test 7 : 
+ 
+==112644== Memcheck, a memory error detector
+==112644== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==112644== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==112644== Command: ./s21_cat -s TestText1.txt TestText2.txt TestText3.txt
+==112644== 
+123   456
+
+789
+two files	   456
+
+789
+
+threes files	
+ 
+   456
+
+789
+==112644== 
+==112644== HEAP SUMMARY:
+==112644==     in use at exit: 0 bytes in 0 blocks
+==112644==   total heap usage: 7 allocs, 7 frees, 17,800 bytes allocated
+==112644== 
+==112644== All heap blocks were freed -- no leaks are possible
+==112644== 
+==112644== For lists of detected and suppressed errors, rerun with: -s
+==112644== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+
+
+
+
+ Test 8 : 
+ 
+==112654== Memcheck, a memory error detector
+==112654== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==112654== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==112654== Command: ./s21_cat -t TestText1.txt TestText2.txt TestText3.txt
+==112654== 
+123   456
+
+789
+two files^I   456
+
+
+
+
+789
+
+
+
+three^Ms files^I
+ 
+   456
+
+
+
+
+789
+==112654== 
+==112654== HEAP SUMMARY:
+==112654==     in use at exit: 0 bytes in 0 blocks
+==112654==   total heap usage: 7 allocs, 7 frees, 17,800 bytes allocated
+==112654== 
+==112654== All heap blocks were freed -- no leaks are possible
+==112654== 
+==112654== For lists of detected and suppressed errors, rerun with: -s
+==112654== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+
+
+
+
+ Test 9 : 
+ 
+==112666== Memcheck, a memory error detector
+==112666== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==112666== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==112666== Command: ./s21_cat -T TestText1.txt TestText2.txt TestText3.txt
+==112666== 
+123   456
+
+789
+two files^I   456
+
+
+
+
+789
+
+
+
+threes files^I
+ 
+   456
+
+
+
+
+789
+==112666== 
+==112666== HEAP SUMMARY:
+==112666==     in use at exit: 0 bytes in 0 blocks
+==112666==   total heap usage: 7 allocs, 7 frees, 17,800 bytes allocated
+==112666== 
+==112666== All heap blocks were freed -- no leaks are possible
+==112666== 
+==112666== For lists of detected and suppressed errors, rerun with: -s
+==112666== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+
+
+
+
+ Test 10 : 
+ 
+==112677== Memcheck, a memory error detector
+==112677== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==112677== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==112677== Command: ./s21_cat -ev TestText1.txt TestText2.txt TestText3.txt
+==112677== 
+123   456$
+$
+789$
+two files	   456$
+$
+$
+$
+$
+789$
+$
+$
+$
+three^Ms files	$
+ $
+   456$
+$
+$
+$
+$
+789$
+==112677== 
+==112677== HEAP SUMMARY:
+==112677==     in use at exit: 0 bytes in 0 blocks
+==112677==   total heap usage: 7 allocs, 7 frees, 17,800 bytes allocated
+==112677== 
+==112677== All heap blocks were freed -- no leaks are possible
+==112677== 
+==112677== For lists of detected and suppressed errors, rerun with: -s
+==112677== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+
+
+
+
+ Test 11 : 
+ 
+==112686== Memcheck, a memory error detector
+==112686== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==112686== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==112686== Command: ./s21_cat -be TestText1.txt TestText2.txt TestText3.txt
+==112686== 
+     1	123   456$
+$
+     2	789$
+     3	two files	   456$
+$
+$
+$
+$
+     4	789$
+$
+$
+$
+     5	three^Ms files	$
+     6	 $
+     7	   456$
+$
+$
+$
+$
+     8	789$
+==112686== 
+==112686== HEAP SUMMARY:
+==112686==     in use at exit: 0 bytes in 0 blocks
+==112686==   total heap usage: 7 allocs, 7 frees, 17,800 bytes allocated
+==112686== 
+==112686== All heap blocks were freed -- no leaks are possible
+==112686== 
+==112686== For lists of detected and suppressed errors, rerun with: -s
+==112686== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+
+
+
+
+ Test 12 : 
+ 
+==112697== Memcheck, a memory error detector
+==112697== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==112697== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==112697== Command: ./s21_cat -e\ --number-nonblank TestText1.txt TestText2.txt TestText3.txt
+==112697== 
+cat: invalid option -- ' '
+Try 'cat --help' for more information.
+cat: invalid option -- '-'
+Try 'cat --help' for more information.
+cat: invalid option -- '-'
+Try 'cat --help' for more information.
+cat: invalid option -- 'u'
+Try 'cat --help' for more information.
+cat: invalid option -- 'm'
+Try 'cat --help' for more information.
+cat: invalid option -- 'r'
+Try 'cat --help' for more information.
+cat: invalid option -- '-'
+Try 'cat --help' for more information.
+cat: invalid option -- 'o'
+Try 'cat --help' for more information.
+cat: invalid option -- 'l'
+Try 'cat --help' for more information.
+cat: invalid option -- 'a'
+Try 'cat --help' for more information.
+cat: invalid option -- 'k'
+Try 'cat --help' for more information.
+==112697== 
+==112697== HEAP SUMMARY:
+==112697==     in use at exit: 0 bytes in 0 blocks
+==112697==   total heap usage: 1 allocs, 1 frees, 4,096 bytes allocated
+==112697== 
+==112697== All heap blocks were freed -- no leaks are possible
+==112697== 
+==112697== For lists of detected and suppressed errors, rerun with: -s
+==112697== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+
+
+
+
+ Test 13 : 
+ 
+==112707== Memcheck, a memory error detector
+==112707== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==112707== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==112707== Command: ./s21_cat -en TestText1.txt TestText2.txt TestText3.txt
+==112707== 
+     1	123   456$
+     2	$
+     3	789$
+     4	two files	   456$
+     5	$
+     6	$
+     7	$
+     8	$
+     9	789$
+    10	$
+    11	$
+    12	$
+    13	three^Ms files	$
+    14	 $
+    15	   456$
+    16	$
+    17	$
+    18	$
+    19	$
+    20	789$
+==112707== 
+==112707== HEAP SUMMARY:
+==112707==     in use at exit: 0 bytes in 0 blocks
+==112707==   total heap usage: 7 allocs, 7 frees, 17,800 bytes allocated
+==112707== 
+==112707== All heap blocks were freed -- no leaks are possible
+==112707== 
+==112707== For lists of detected and suppressed errors, rerun with: -s
+==112707== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+
+
+
+
+ Test 14 : 
+ 
+==112719== Memcheck, a memory error detector
+==112719== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==112719== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==112719== Command: ./s21_cat -es TestText1.txt TestText2.txt TestText3.txt
+==112719== 
+123   456$
+$
+789$
+two files	   456$
+$
+789$
+$
+three^Ms files	$
+ $
+   456$
+$
+789$
+==112719== 
+==112719== HEAP SUMMARY:
+==112719==     in use at exit: 0 bytes in 0 blocks
+==112719==   total heap usage: 7 allocs, 7 frees, 17,800 bytes allocated
+==112719== 
+==112719== All heap blocks were freed -- no leaks are possible
+==112719== 
+==112719== For lists of detected and suppressed errors, rerun with: -s
+==112719== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+
+
+
+
+ Test 15 : 
+ 
+==112730== Memcheck, a memory error detector
+==112730== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==112730== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==112730== Command: ./s21_cat -et TestText1.txt TestText2.txt TestText3.txt
+==112730== 
+123   456$
+$
+789$
+two files^I   456$
+$
+$
+$
+$
+789$
+$
+$
+$
+three^Ms files^I$
+ $
+   456$
+$
+$
+$
+$
+789$
+==112730== 
+==112730== HEAP SUMMARY:
+==112730==     in use at exit: 0 bytes in 0 blocks
+==112730==   total heap usage: 7 allocs, 7 frees, 17,800 bytes allocated
+==112730== 
+==112730== All heap blocks were freed -- no leaks are possible
+==112730== 
+==112730== For lists of detected and suppressed errors, rerun with: -s
+==112730== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+
+
+
+
+ Test 16 : 
+ 
+==112739== Memcheck, a memory error detector
+==112739== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==112739== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==112739== Command: ./s21_cat -eT TestText1.txt TestText2.txt TestText3.txt
+==112739== 
+123   456$
+$
+789$
+two files^I   456$
+$
+$
+$
+$
+789$
+$
+$
+$
+three^Ms files^I$
+ $
+   456$
+$
+$
+$
+$
+789$
+==112739== 
+==112739== HEAP SUMMARY:
+==112739==     in use at exit: 0 bytes in 0 blocks
+==112739==   total heap usage: 7 allocs, 7 frees, 17,800 bytes allocated
+==112739== 
+==112739== All heap blocks were freed -- no leaks are possible
+==112739== 
+==112739== For lists of detected and suppressed errors, rerun with: -s
+==112739== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+
+
+
+
+ Test 17 : 
+ 
+==112750== Memcheck, a memory error detector
+==112750== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==112750== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==112750== Command: ./s21_cat -e\ -t TestText1.txt TestText2.txt TestText3.txt
+==112750== 
+cat: invalid option -- ' '
+Try 'cat --help' for more information.
+cat: invalid option -- '-'
+Try 'cat --help' for more information.
+==112750== 
+==112750== HEAP SUMMARY:
+==112750==     in use at exit: 0 bytes in 0 blocks
+==112750==   total heap usage: 1 allocs, 1 frees, 4,096 bytes allocated
+==112750== 
+==112750== All heap blocks were freed -- no leaks are possible
+==112750== 
+==112750== For lists of detected and suppressed errors, rerun with: -s
+==112750== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+
+
+
+
+ Test 18 : 
+ 
+==112761== Memcheck, a memory error detector
+==112761== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==112761== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==112761== Command: ./s21_cat -sn TestText1.txt TestText2.txt TestText3.txt
+==112761== 
+     1	123   456
+     2	
+     3	789
+     4	two files	   456
+     5	
+     6	789
+     7	
+     8	threes files	
+     9	 
+    10	   456
+    11	
+    12	789
+==112761== 
+==112761== HEAP SUMMARY:
+==112761==     in use at exit: 0 bytes in 0 blocks
+==112761==   total heap usage: 7 allocs, 7 frees, 17,800 bytes allocated
+==112761== 
+==112761== All heap blocks were freed -- no leaks are possible
+==112761== 
+==112761== For lists of detected and suppressed errors, rerun with: -s
+==112761== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+
+
+
+
+ Test 19 : 
+ 
+==112770== Memcheck, a memory error detector
+==112770== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==112770== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==112770== Command: ./s21_cat -bn TestText1.txt TestText2.txt TestText3.txt
+==112770== 
+     1	123   456
+
+     2	789
+     3	two files	   456
+
+
+
+
+     4	789
+
+
+
+     5	threes files	
+     6	 
+     7	   456
+
+
+
+
+     8	789
+==112770== 
+==112770== HEAP SUMMARY:
+==112770==     in use at exit: 0 bytes in 0 blocks
+==112770==   total heap usage: 7 allocs, 7 frees, 17,800 bytes allocated
+==112770== 
+==112770== All heap blocks were freed -- no leaks are possible
+==112770== 
+==112770== For lists of detected and suppressed errors, rerun with: -s
+==112770== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
