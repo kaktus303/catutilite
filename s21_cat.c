@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
     {
         if (argv[i][0] == '-')
         {
-            for (int j = 1; j < strlen(argv[i]); ++j)
+            for (int j = 1; j < (int) strlen(argv[i]); ++j)
                 if ((argv[i][j] == 'b' && argv[i][1] != '-') || strcmp(argv[i], "--number-nonblank") == 0)
                     b_flag = 1;
                 else if ((argv[i][j] == 'e' || argv[i][j] == 'E') && argv[i][1] != '-')
